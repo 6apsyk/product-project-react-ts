@@ -5,7 +5,7 @@
 
     position: relative;
 
-    transition: width 0.5s;
+    transition: width 0.3s;
 }
 
 .collapsed {
@@ -18,4 +18,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.lang {
+    margin-left: 20px;
 }
