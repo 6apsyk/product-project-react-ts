@@ -20,7 +20,7 @@ function buildPlagins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInst
     ];
     if (isDev) {
         plagins.push(new ReactRefreshWebpackPlugin());
-        plagins.push(new webpack.HotModuleReplacementPlugin());
+        // plagins.push(new webpack.HotModuleReplacementPlugin());
     }
 
     return plagins;
