@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript'
+    'standard-with-typescript',
+    'plugin:i18next/recommended'
   ],
   overrides: [
   ],
@@ -18,7 +19,7 @@ module.exports = {
     }
 
   },
-  parser: '@typescript-eslint/parser',
+  // parser: '@typescript-eslint/parser',
   plugins: [
     'react',
     '@typescript-eslint',
@@ -44,7 +45,8 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/jsx-props-no-spreading": 'off',
     "@typescript-eslint/no-floating-promises": "off",
-    "@typescript-eslint/naming-convention": "off"
+    "@typescript-eslint/naming-convention": "off",
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true
