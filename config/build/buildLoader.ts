@@ -1,3 +1,4 @@
+/* eslint-disable quote-props */
 import webpack from 'webpack'
 import { BuildOptions } from './types/config'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
@@ -15,13 +16,16 @@ function buildLoader (options: BuildOptions): webpack.RuleSetRule[] {
     use: {
       loader: 'babel-loader',
       options: {
-        presets: ['@babel/preset-env']
-        // plugins: [
-        //   // 'i18next-extract', {
-        //   //   // locales: ['ru', 'en'],
-        //   //   keyAsDefaultValue: true
-        //   // }
-        // ]
+        presets: ['@babel/preset-env'],
+        plugins: [
+          [
+            'i18next-extract',
+            {
+              locales: ['ru', 'en'],
+              keyAsDefaultValue: true
+            }
+          ]
+        ]
       }
     }
   }
