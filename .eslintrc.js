@@ -36,7 +36,8 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/naming-convention': 'off',
-    'i18next/no-literal-string': ['warn', { markupOnly: true }]
+    'i18next/no-literal-string': ['warn', { markupOnly: true }],
+    'max-len': ['error', { ignoreComments: true, code: 120 }]
   },
   globals: {
     __IS_DEV__: true
