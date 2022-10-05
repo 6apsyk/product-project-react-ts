@@ -19,7 +19,7 @@ function buildPlagins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginIns
     })
   ]
   if (isDev) {
-    plagins.push(new ReactRefreshWebpackPlugin())
+    plagins.push(new ReactRefreshWebpackPlugin({ overlay: false }))
     // plagins.push(new webpack.HotModuleReplacementPlugin());
   }
 
