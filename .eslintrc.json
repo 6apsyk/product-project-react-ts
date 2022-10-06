@@ -26,7 +26,6 @@
     "node_modules/",
     "*.d.ts"
   ],
-  "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -63,8 +62,16 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-floating-promises": "off",
     "@typescript-eslint/naming-convention": "off",
-    "i18next/no-literal-string": ["warn", { "markupOnly": true }],
+    "i18next/no-literal-string": ["warn", { "markupOnly": true, "ignoreAttribute": ["data-testid"] }],
     "max-len": ["error", { "ignoreComments": true, "code": 120 }],
     "@typescript-eslint/ban-ts-comment": "off"
-  }
+  },
+  "overrides": [
+    {
+        "files": ["**/src/**/*.test.{ts,tsx}"],
+        "rules": {
+            "i18next/no-literal-string": "off"
+        }
+    }
+  ]
 }
