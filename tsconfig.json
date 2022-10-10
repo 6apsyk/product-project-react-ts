@@ -19,7 +19,7 @@
             "*": ["./src/*"]
       }
     },
-    "include": ["**/*.ts", "**/*.tsx"],
+    "include": ["**/*.ts", "**/*.tsx", "./config/jest/setupTests.ts"],
     // "exclude": [
     //   "node_modules",
     //   "**/*.js"
