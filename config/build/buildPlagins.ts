@@ -18,13 +18,11 @@ function buildPlagins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginIns
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
         }),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false
-        })
+        
     ]
     if (isDev) {
         plagins.push(new ReactRefreshWebpackPlugin({ overlay: false }))
-    // plagins.push(new webpack.HotModuleReplacementPlugin());
+        plagins.push(new BundleAnalyzerPlugin({openAnalyzer: false}));
     }
 
     return plagins
