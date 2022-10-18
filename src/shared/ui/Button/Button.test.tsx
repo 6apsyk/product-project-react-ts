@@ -9,6 +9,6 @@ describe('Button', () => {
     test('test clear theme', () => {
         render(<Button theme={ButtonTheme.CLEAR}>TEST</Button>)
         expect(screen.getByText("TEST")).toHaveClass('clear')
-        screen.debug()
+        // screen.debug()
     })
 })
