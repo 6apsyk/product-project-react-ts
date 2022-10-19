@@ -1,78 +1,74 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "es6": true,
-    // "node": true,
-    "jest": true
-  },
-  "globals": {
-    "__IS_DEV": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    // "plugin:react-hooks/recommended",
-    "plugin:i18next/recommended"
-    // "prettier"
-  ],
-  "plugins": [
-    "@typescript-eslint",
-    "i18next",
-    "react"
-  ],
-  "ignorePatterns": [
-    "node_modules/",
-    "*.d.ts"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    // "project": "./tsconfig.json",
-    // "allowImportExportEverywhere": false,
-    // "codeFrame": false,
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "rules": {
-    "react/jsx-indent": [2, 4],
-    "react/jsx-indent-props": [2, 4],
-    "indent": [2, 4],
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".tsx", ".ts", ".test.tsx"] }],
-    "import/no-unresolved": "off",
-    "import/prefer-default-export": "off",
-    "no-unused-vars": "warn",
-    "react/require-default-props": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "warn",
-    "react/function-component-definition": "off",
-    "no-shadow": "off",
-    "import/extensions": "off",
-    "import/no-extraneous-dependencies": "off",
-    "no-underscore-dangle": "off",
-    "@typescript-eslint/strict-boolean-expression": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-floating-promises": "off",
-    "@typescript-eslint/naming-convention": "off",
-    "i18next/no-literal-string": ["warn", { "markupOnly": true, "ignoreAttribute": ["data-testid", "to"] }],
-    "max-len": ["error", { "ignoreComments": true, "code": 120 }],
-    "@typescript-eslint/ban-ts-comment": "off",
-    "react/display-name": "off"
-  },
-  "overrides": [
-    {
-        "files": ["**/src/**/*.test.{ts,tsx}"],
-        "rules": {
-            "i18next/no-literal-string": "off"
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "es6": true,
+        // "node": true,
+        "jest": true
+    },
+    "globals": {
+        "__IS_DEV": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        // "plugin:react-hooks/recommended",
+        "plugin:i18next/recommended"
+        // "prettier"
+    ],
+    "plugins": ["@typescript-eslint", "i18next", "react", "react-hooks"],
+    "ignorePatterns": ["node_modules/", "*.d.ts"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        // "project": "./tsconfig.json",
+        // "allowImportExportEverywhere": false,
+        // "codeFrame": false,
+        "ecmaFeatures": {
+            "jsx": true
         }
-    }
-  ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "react/jsx-indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
+        "indent": [2, 4],
+        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".tsx", ".ts", ".test.tsx"] }],
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "no-unused-vars": "warn",
+        "react/require-default-props": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-props-no-spreading": "warn",
+        "react/function-component-definition": "off",
+        "no-shadow": "off",
+        "import/extensions": "off",
+        "import/no-extraneous-dependencies": "off",
+        "no-underscore-dangle": "off",
+        "@typescript-eslint/strict-boolean-expression": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "i18next/no-literal-string": ["warn", { "markupOnly": true, "ignoreAttribute": ["data-testid", "to"] }],
+        "max-len": ["error", { "ignoreComments": true, "code": 120 }],
+        "@typescript-eslint/ban-ts-comment": "off",
+        "react/display-name": "off",
+        "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+        "react-hooks/exhaustive-deps": "error"
+    },
+    "overrides": [
+        {
+            "files": ["**/src/**/*.{test,stories}.{ts,tsx}"],
+            "rules": {
+                "i18next/no-literal-string": "off",
+                "max-len": "off"
+            }
+        }
+    ]
 }
