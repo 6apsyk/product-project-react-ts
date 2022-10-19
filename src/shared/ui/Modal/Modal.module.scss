@@ -23,9 +23,7 @@
 .content {
     padding: 20px;
     border-radius: 12px;
-
-    // background: var(--bg-color);
-    background: white;
+    background: var(--bg-color);
     max-width: 60%;
     transition: 0.3s transform;
     transform: scale(0.5);

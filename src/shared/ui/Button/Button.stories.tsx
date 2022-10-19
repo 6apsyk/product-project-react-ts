@@ -18,14 +18,14 @@ export const Primary = Template.bind({});
 Primary.args = {
     children: 'Text',
 };
-Primary.decorators = [ThemeDecorator(Theme.LIGTH)]
+Primary.decorators = [ThemeDecorator(Theme.LIGHT)]
 
 export const Clear = Template.bind({});
 Clear.args = {
     children: 'Text',
     theme: ButtonTheme.CLEAR,
 };
-Clear.decorators = [ThemeDecorator(Theme.LIGTH)]
+Clear.decorators = [ThemeDecorator(Theme.LIGHT)]
 
 export const ClearInverted = Template.bind({});
 ClearInverted.args = {
