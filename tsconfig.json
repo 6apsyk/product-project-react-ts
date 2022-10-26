@@ -16,8 +16,7 @@
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
         "paths": {
-            "*": ["./src/*"],
-            "entities": ["./src/entities/*"]
+            "*": ["./src/*"]
         }
     },
     "include": ["**/*.ts", "**/*.tsx", "./config/jest/setupTests.ts"],
