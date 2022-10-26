@@ -1,4 +1,3 @@
-import { useTheme } from 'app/provider/ThemeProvider';
 import React, { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import classNames from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
@@ -27,8 +26,6 @@ export const Modal = (props: ModalProps) => {
     const [isMounted, setIsMounted] = useState(false)
 
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
-
-    const {theme} = useTheme()
 
     const mods: Record<string , boolean> = {
         [cls.opened] : isOpen,

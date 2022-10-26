@@ -6,5 +6,9 @@
   "О себе": "About us",
   "toggle": "toggle",
   "Короткий язык": "En",
-  "Войти": "LOGIN"
+  "Войти": "LOGIN",
+  "Вы ввели не правильный логин или пароль": "You login or password encorrect",
+  "Введите логин": "Login",
+  "Введите пароль": "Password",
+  "Форма авторизации": "Autorization form"
 }

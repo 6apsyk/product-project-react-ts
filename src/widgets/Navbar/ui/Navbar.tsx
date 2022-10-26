@@ -1,11 +1,11 @@
 /* eslint-disable i18next/no-literal-string */
+import { getUserAuthState, userActions } from 'entities/User'
 import { LoginModal } from 'features'
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useDispatch, useSelector } from 'react-redux'
 import classNames from 'shared/lib/classNames/classNames'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { Modal } from 'shared/ui/Modal/Modal'
-// import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import cls from './Navbar.module.scss'
 
 interface NavbarProps {
@@ -15,6 +15,9 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
 
     const [isAuthModal, setIsAuthModal] = useState(false)
+
+    const authData = useSelector(getUserAuthState)
+    const dispatch = useDispatch()
 
     const {t} = useTranslation()
 
@@ -26,12 +29,37 @@ export const Navbar = ({ className }: NavbarProps) => {
         setIsAuthModal(prev => !prev)
     }, [])
 
+    const onLogout = useCallback(() => {
+        dispatch(userActions.logout())
+    }, [dispatch])
+
+    if (authData) {
+        return (
+            <div className={classNames(cls.Navbar, {}, [className])}>
+                <Button 
+                    className={cls.links} 
+                    theme={ButtonTheme.OUTLINE_INVERTED} 
+                    onClick={onLogout}
+                >
+                    {t('Выйти')}
+                </Button>
+            </div>
+        )
+    }
+    
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
-            <Button className={cls.links} theme={ButtonTheme.OUTLINE_INVERTED} onClick={onShowModal}>
+            <Button 
+                className={cls.links} 
+                theme={ButtonTheme.OUTLINE_INVERTED} 
+                onClick={onShowModal}
+            >
                 {t('Войти')}
             </Button>
-            <LoginModal isOpen={isAuthModal} onClose={onCloseModal}/>
+            <LoginModal 
+                isOpen={isAuthModal} 
+                onClose={onCloseModal}
+            />
         </div>
     )
 }

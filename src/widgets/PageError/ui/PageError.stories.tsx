@@ -6,7 +6,7 @@ import { PageError } from './PageError';
 
 
 export default {
-    title: 'widjets/PageError',
+    title: 'widgets/PageError',
     component: PageError,
     argTypes: {
         backgroundColor: { control: 'color' },

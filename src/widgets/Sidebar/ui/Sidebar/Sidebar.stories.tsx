@@ -6,7 +6,7 @@ import { Sidebar } from './Sidebar';
 
 
 export default {
-    title: 'widjets/Sidebar',
+    title: 'widgets/Sidebar',
     component: Sidebar,
     argTypes: {
         backgroundColor: { control: 'color' },
