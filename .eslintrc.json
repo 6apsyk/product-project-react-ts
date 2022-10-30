@@ -7,7 +7,7 @@
         "jest": true
     },
     "globals": {
-        "__IS_DEV": true
+        "__IS_DEV__": true
     },
     "extends": [
         "eslint:recommended",

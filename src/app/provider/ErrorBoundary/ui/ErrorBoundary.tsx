@@ -31,7 +31,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
         if (hasError) {
             // Можно отрендерить запасной UI произвольного вида
-            return <Suspense fallback=""><PageError /></Suspense>
+            return (
+                <Suspense fallback="">
+                    <PageError />
+                </Suspense>
+            )
         }
 
         return children
