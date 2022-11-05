@@ -1,6 +1,5 @@
 import { InputHTMLAttributes, memo, useEffect, useRef, useState} from 'react';
 import classNames from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import cls from './Input.module.scss';
 
 //исключение типов для своего пользования
@@ -17,8 +16,6 @@ export const Input = memo((props: InputProps) => {
 
     const [isFocused, setIsFocused] = useState(false)
     const [caretPosition, setCaretPosition] = useState(0);
-
-    const {t} = useTranslation()
 
     const ref = useRef<HTMLInputElement>(null)
 

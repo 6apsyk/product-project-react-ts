@@ -3,12 +3,13 @@
   "Перевод": "Translate",
   "Язык": "English",
   "Главная": "Main",
-  "О себе": "About us",
+  "О сайте": "About us",
   "toggle": "toggle",
   "Короткий язык": "En",
   "Войти": "LOGIN",
   "Вы ввели не правильный логин или пароль": "You login or password encorrect",
   "Введите логин": "Login",
   "Введите пароль": "Password",
-  "Форма авторизации": "Autorization form"
+  "Форма авторизации": "Autorization form",
+  "Профиль": "Profile"
 }
