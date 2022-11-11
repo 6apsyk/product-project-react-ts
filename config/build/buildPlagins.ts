@@ -5,7 +5,7 @@ import { BuildOptions } from './types/config'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-function buildPlagins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+function buildPlagins ({ paths, isDev, apiUrl }: BuildOptions): webpack.WebpackPluginInstance[] {
     const plagins = [
         new HtmlWebpackPlugin({
             template: paths.html
@@ -16,7 +16,8 @@ function buildPlagins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginIns
             chunkFilename: 'css/[name].[contenthash:8].css'
         }),
         new webpack.DefinePlugin({
-            __IS_DEV__: JSON.stringify(isDev)
+            __IS_DEV__: JSON.stringify(isDev),
+            __API__: JSON.stringify(apiUrl)
         }),
         
     ]

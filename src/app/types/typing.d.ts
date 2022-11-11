@@ -15,3 +15,4 @@ declare module '*.jpeg';
 declare module '*.jpg';
 
 declare const __IS_DEV__: boolean
+declare const __API__: string

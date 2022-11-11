@@ -7,7 +7,8 @@
         "jest": true
     },
     "globals": {
-        "__IS_DEV__": true
+        "__IS_DEV__": true,
+        "__API__": true
     },
     "extends": [
         "eslint:recommended",
@@ -56,7 +57,7 @@
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/naming-convention": "off",
         "i18next/no-literal-string": ["warn", { "markupOnly": true, "ignoreAttribute": ["data-testid", "to"] }],
-        "max-len": ["error", { "ignoreComments": true, "code": 120 }],
+        "max-len": ["error", { "ignoreComments": true, "code": 140 }],
         "@typescript-eslint/ban-ts-comment": "off",
         "react/display-name": "off",
         "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
