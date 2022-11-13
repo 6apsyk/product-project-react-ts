@@ -8,7 +8,6 @@ import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
 
 export interface StateSchema {
-    // counter: CounterSchema;
     user: UserSchema;
 
     // Асинхронные редюсеры
