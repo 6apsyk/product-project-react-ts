@@ -3,9 +3,9 @@ import { UserSchema } from 'entities/User';
 import {AnyAction, EnhancedStore, Reducer, ReducersMapObject} from '@reduxjs/toolkit';
 import { CombinedState } from 'redux';
 import { LoginSchema } from 'features/AuthByUsername';
-import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
+import { ProfileSchema } from 'features/EditableProfileCard';
 
 export interface StateSchema {
     user: UserSchema;
