@@ -4,7 +4,7 @@ import { LoginModal } from 'features/AuthByUsername'
 import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
-import classNames from 'shared/lib/classNames/classNames'
+import {classNames} from 'shared/lib/classNames/classNames'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import cls from './Navbar.module.scss'
 

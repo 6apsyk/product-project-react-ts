@@ -1,4 +1,4 @@
-import classNames from 'shared/lib/classNames/classNames'
+import {classNames} from 'shared/lib/classNames/classNames'
 import { AppRouter } from 'app/provider/router'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar/ui'

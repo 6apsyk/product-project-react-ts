@@ -17,3 +17,8 @@
 .readonly {
     border: 2px solid var(--inverted-primary-color);
 }
+
+.avatarWrapper {
+    display: flex;
+    justify-content: center;
+}
