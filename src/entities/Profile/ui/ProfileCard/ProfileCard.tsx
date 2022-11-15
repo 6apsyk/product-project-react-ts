@@ -99,7 +99,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
             />
             <Input
                 value={data?.city}
-                placeholder={t('Ваша страна:')}
+                placeholder={t('Ваш город:')}
                 className={cls.input}
                 onChange={onChangeCity}
                 readonly={readonly}
