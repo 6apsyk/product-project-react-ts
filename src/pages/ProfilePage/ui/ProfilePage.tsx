@@ -8,10 +8,10 @@ import {
     getProfileIsLoading, 
     getProfileReadonly, 
     profileActions, 
-    profileReducer 
+    profileReducer,
+    ValidateProfileErrors 
 } from 'features/EditableProfileCard';
 import { getValidateErrors } from 'features/EditableProfileCard/model/selectors/getValidateErrors/getValidateErrors';
-import { ValidateProfileErrors } from 'features/EditableProfileCard/model/types/profile';
 import { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux';
@@ -48,7 +48,9 @@ const ProfilePage = ({className}: ProfilePageProps) => {
     }
 
     useEffect(() => {
-        dispatch(fetchProfileData())
+        if (__PROJECT__ !== 'storybook'){
+            dispatch(fetchProfileData())
+        }
     }, [dispatch])
 
     const onChangeFirstname = useCallback((value?: string) => {

@@ -2,6 +2,7 @@
 export {
     Profile,
     ProfileSchema,
+    ValidateProfileErrors
 } from './model/types/profile';
 
 export {
@@ -11,11 +12,11 @@ export {
 
 export {
     fetchProfileData
-} from './model/services/fetchProfileData'
+} from './model/services/fetchProfileData/fetchProfileData'
 
 export {
     updateProfileData
-} from './model/services/updateProfileData'
+} from './model/services/updateProfileData/updateProfileData'
 
 export {getProfileData} from './model/selectors/getProfileData/getProfileData'
 export { getProfileForm } from './model/selectors/getProfileForm/getProfileForm';
