@@ -12,7 +12,7 @@ import { getLoginError } from '../../model/selectors/getLoginError/getLoginError
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsename/loginByUsename';
-import classNames from 'shared/lib/classNames/classNames';
+import {classNames} from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 
 export interface LoginFormProps {

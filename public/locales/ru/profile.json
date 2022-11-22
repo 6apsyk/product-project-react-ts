@@ -1,1 +1,11 @@
-{}
+{
+    "Профиль": "Profile",
+    "Редактировать": "Edit",
+    "Ваше имя:": "Your name:",
+    "Ваша фамилия:": "Your lastname:",
+    "Неккоректное имя или фамилия:": "Incorrect name or lastname",
+    "Неккоректный возраст:": "Incorrect age",
+    "Неккоректный город:": "Incorrect city",
+    "Нет данных профиля:": "no profile data",
+    "Сервер не отвечает:": " server not found"
+}

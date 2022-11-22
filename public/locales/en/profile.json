@@ -1,6 +1,20 @@
 {
     "Профиль": "Profile",
     "Редактировать": "Edit",
+    "Неккоректное имя или фамилия": "Incorrect name or lastname",
+    "Неккоректный возраст": "Incorrect age",
+    "Неккоректный город": "Incorrect city",
+    "Нет данных профиля": "no profile data",
+    "Сервер не отвечает": " server not found",
     "Ваше имя:": "Your name:",
-    "Ваша фамилия:": "Your lastname:"
+    "Ваша фамилия:": "Your lastname:",
+    "Ваш возраст:": "Your age:",
+    "Ваш город:": "Your city:",
+    "Имя пользователя:": "Your username:",
+    "Ваш аватар:": "Your avatar:",
+    "Ваша валюта:": "Your currency:",
+    "Ваша страна:": "Your country:",
+    "Сохранить": "Save",
+    "Отменить": "Cancel",
+    "аватар": "avatar"
 }
