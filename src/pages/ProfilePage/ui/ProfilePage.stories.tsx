@@ -5,7 +5,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import avatar from 'shared/assets/tests/storybook.jpg'
+// import avatar from 'shared/assets/tests/storybook.jpg'
 
 export default {
     title: 'pages/ProfilePage',
@@ -22,7 +22,7 @@ Normal.args = {};
 Normal.decorators = [StoreDecorator({
     profile: {
         form : {
-            avatar: avatar,
+            // avatar: avatar,
             age: 33,
             city: 'sddfsfd',
             country: Country.Armenia,
@@ -39,7 +39,7 @@ Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
     profile: {
         form : {
-            avatar: avatar,
+            // avatar: avatar,
             age: 33,
             city: 'sddfsfd',
             country: Country.Armenia,
