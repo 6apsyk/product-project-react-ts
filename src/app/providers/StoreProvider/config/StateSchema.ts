@@ -6,13 +6,16 @@ import { LoginSchema } from 'features/AuthByUsername';
 import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
 import { ProfileSchema } from 'features/EditableProfileCard';
+import { ArticleDetailsSchema } from 'entities/Article';
 
 export interface StateSchema {
     user: UserSchema;
 
     // Асинхронные редюсеры
     loginForm?: LoginSchema;
-    profile?: ProfileSchema
+    profile?: ProfileSchema;
+    articleDetails?: ArticleDetailsSchema;
+
 }
 
 export type StateSchemaKey = keyof StateSchema;

@@ -77,7 +77,6 @@ describe('profileSlice.test', () => {
             isLoading: false,
             validateErrors: undefined,
             readonly: true,
-            validateError: undefined,
             form: data,
             data,
         });

@@ -1,4 +1,4 @@
-import { StateSchema } from "app/provider/StoreProvider"
+import { StateSchema } from "app/providers/StoreProvider"
 import { getLoginIsLoading } from "./getLoginIsLoading"
 
 describe('getLoginIsLoading.test', () => {

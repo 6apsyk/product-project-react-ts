@@ -1,7 +1,7 @@
 import { Mods, classNames} from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import cls from './ProfileCard.module.scss';
-import { Text, TextAligh, TextTheme } from 'shared/ui/Text/Text';
+import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/Input';
 import { Profile } from 'features/EditableProfileCard';
 import { Loader } from 'shared/ui/Loader/Loader';
@@ -59,7 +59,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     theme={TextTheme.ERROR} 
                     title={t('Произошла ошибка на сервере!')} 
                     text={t('Попробуйте обновить страницу')}
-                    align={TextAligh.CENTER}
+                    align={TextAlign.CENTER}
                 />
             </div>
         )

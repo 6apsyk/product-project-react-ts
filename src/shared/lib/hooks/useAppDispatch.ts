@@ -1,4 +1,4 @@
-import { AppDispatch } from "app/provider/StoreProvider";
+import { AppDispatch } from "app/providers/StoreProvider";
 import { useDispatch } from "react-redux";
 
 
