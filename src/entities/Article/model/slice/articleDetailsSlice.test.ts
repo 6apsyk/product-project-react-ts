@@ -77,10 +77,10 @@ describe('articleDetailsSlice.test', () => {
         };
         expect(articleDetailsReducer(
             state as ArticleDetailsSchema,
-            fetchArticleById.rejected,
+            fetchArticleById.rejected(new Error, '2', '','error'),
         )).toEqual({
             isLoading: false,
-            // error: 'error'
+            error: 'error'
         });
     });
 });

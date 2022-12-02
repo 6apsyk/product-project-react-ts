@@ -7,6 +7,7 @@ import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
 import { ProfileSchema } from 'features/EditableProfileCard';
 import { ArticleDetailsSchema } from 'entities/Article';
+import { articleDetailsCommentsSchema } from 'features/ArticleCommentList';
 
 export interface StateSchema {
     user: UserSchema;
@@ -15,6 +16,7 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
+    articleDetailsComments?: articleDetailsCommentsSchema
 
 }
 
