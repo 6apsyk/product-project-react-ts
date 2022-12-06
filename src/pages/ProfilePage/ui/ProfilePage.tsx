@@ -12,12 +12,14 @@ import {
     ValidateProfileErrors 
 } from 'features/EditableProfileCard';
 import { getValidateErrors } from 'features/EditableProfileCard/model/selectors/getValidateErrors/getValidateErrors';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import {classNames} from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
@@ -32,6 +34,7 @@ interface ProfilePageProps {
 const ProfilePage = ({className}: ProfilePageProps) => {
     const { t } = useTranslation('profile')
     const dispatch = useAppDispatch()
+    const { id } = useParams<{ id: string }>();
 
     const form = useSelector(getProfileForm)
     const isLoading = useSelector(getProfileIsLoading)
@@ -47,11 +50,11 @@ const ProfilePage = ({className}: ProfilePageProps) => {
         [ValidateProfileErrors.SERVER_ERROR]: t('Сервер не отвечает')
     }
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook'){
-            dispatch(fetchProfileData())
-        }
-    }, [dispatch])
+    useInitialEffect(() => {
+        if (id){
+            dispatch(fetchProfileData(id)) 
+        }    
+    })
 
     const onChangeFirstname = useCallback((value?: string) => {
         dispatch(profileActions.updateData({first: value}))

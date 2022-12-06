@@ -1,5 +1,5 @@
 /* eslint-disable i18next/no-literal-string */
-import { getUserAuthState, userActions } from 'entities/User'
+import { getUserAuthData, userActions } from 'entities/User'
 import { LoginModal } from 'features/AuthByUsername'
 import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -16,7 +16,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
     const [isAuthModal, setIsAuthModal] = useState(false)
 
-    const authData = useSelector(getUserAuthState)
+    const authData = useSelector(getUserAuthData)
     const dispatch = useDispatch()
 
     const {t} = useTranslation()

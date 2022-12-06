@@ -8,6 +8,7 @@ import { NavigateOptions, To } from 'react-router-dom';
 import { ProfileSchema } from 'features/EditableProfileCard';
 import { ArticleDetailsSchema } from 'entities/Article';
 import { articleDetailsCommentsSchema } from 'features/ArticleCommentList';
+import { AddCommentFormSchema } from 'features/addCommentForm';
 
 export interface StateSchema {
     user: UserSchema;
@@ -16,7 +17,8 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
-    articleDetailsComments?: articleDetailsCommentsSchema
+    articleDetailsComments?: articleDetailsCommentsSchema;
+    addCommentForm?: AddCommentFormSchema;
 
 }
 

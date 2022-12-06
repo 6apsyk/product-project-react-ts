@@ -95,13 +95,43 @@
       "id": "2",
       "text": "some comment 2",
       "articleId": "1",
-      "userId": "1"
+      "userId": "2"
     },
     {
       "id": "3",
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "adminadmiadniadmiada",
+      "id": "QrjlF7e"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "useruseruseruseruesuresr",
+      "id": "qvMAPaN"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "dfdsfdsf",
+      "id": "GsVFfC-"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "123",
+      "id": "IjM5IcH"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "123",
+      "id": "PtUsfC2"
     }
   ],
   "users": [
@@ -110,24 +140,38 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://silikonmold.ru/image/cache/catalog/2021/september/leopard_29x18sm-1200x1200.jpg"
+      "avatar": "https://cdnstatic.rg.ru/uploads/images/145/57/97/68.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://silikonmold.ru/image/cache/catalog/2021/september/leopard_29x18sm-1200x1200.jpg"
+      "avatar": "https://yur-gazeta.ru/wp-content/uploads/2020/07/0001-scaled.jpg"
     }
   ],
-  "profile": {
-    "first": "Илья",
-    "lastname": "Курындин",
-    "age": 31,
-    "currency": "EUR",
-    "country": "Belarus",
-    "city": "Москва",
-    "username": "admin",
-    "avatar": "https://silikonmold.ru/image/cache/catalog/2021/september/leopard_29x18sm-1200x1200.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Илья",
+      "lastname": "Курындин",
+      "age": 31,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "admin",
+      "avatar": "https://cdnstatic.rg.ru/uploads/images/145/57/97/68.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Петя",
+      "lastname": "Васечкин",
+      "age": 18,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Москва",
+      "username": "petya",
+      "avatar": "https://yur-gazeta.ru/wp-content/uploads/2020/07/0001-scaled.jpg"
+    }
+  ]
 }
