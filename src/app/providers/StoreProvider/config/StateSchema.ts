@@ -9,6 +9,7 @@ import { ProfileSchema } from 'features/EditableProfileCard';
 import { ArticleDetailsSchema } from 'entities/Article';
 import { articleDetailsCommentsSchema } from 'features/ArticleCommentList';
 import { AddCommentFormSchema } from 'features/addCommentForm';
+import { articlesPageSchema } from 'features/ArticleList';
 
 export interface StateSchema {
     user: UserSchema;
@@ -19,6 +20,7 @@ export interface StateSchema {
     articleDetails?: ArticleDetailsSchema;
     articleDetailsComments?: articleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
+    articlesPage?: articlesPageSchema;
 
 }
 
