@@ -3,7 +3,10 @@ export { ArticlesViewSelector } from './ui/ArticlesViewSelector/ArticlesViewSele
 export { 
     getArticlePageError, 
     getArticlePageIsLoading, 
-    getArticlePageView 
+    getArticlePageView,
+    getArticlePageNumber,
+    getArticlePageLimit,
+    getArticlePageHasMore 
 } from './model/selectors/articles'
 
 export { 

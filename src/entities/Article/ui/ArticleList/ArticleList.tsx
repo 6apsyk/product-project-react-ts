@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -22,7 +21,6 @@ const getSkeleton = (view: ArticleView) => {
 } 
 
 export const ArticleList = memo((props: ArticleListProps) => {
-    const {t} = useTranslation()
     const {
         className,
         articles,
@@ -41,20 +39,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
         ) 
     }
 
-    if (isLoading) {
-        return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                {getSkeleton(view)}
-            </div>
-        ) 
-    }
-
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             {articles.length > 0 
                 ? articles.map(renderList)
                 : null
             }
+            {isLoading && getSkeleton(view)}
         </div>
     );
 })

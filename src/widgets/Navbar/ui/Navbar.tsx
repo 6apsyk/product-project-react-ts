@@ -48,7 +48,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }
     
     return (
-        <div className={classNames(cls.Navbar, {}, [className])}>
+        <header className={classNames(cls.Navbar, {}, [className])}>
             <Button 
                 className={cls.links} 
                 theme={ButtonTheme.OUTLINE_INVERTED} 
@@ -61,6 +61,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     isOpen={isAuthModal} 
                     onClose={onCloseModal}
                 />}
-        </div>
+        </header>
     )
 })
