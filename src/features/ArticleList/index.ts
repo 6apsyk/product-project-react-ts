@@ -8,7 +8,8 @@ export {
     getArticlePageView,
     getArticlePageNumber,
     getArticlePageLimit,
-    getArticlePageHasMore 
+    getArticlePageHasMore,
+    getArticlePageInit 
 } from './model/selectors/articles'
 
 export { 

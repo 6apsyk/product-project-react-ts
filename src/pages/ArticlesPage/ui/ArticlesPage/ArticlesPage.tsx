@@ -10,10 +10,9 @@ import {
     ArticlesViewSelector, 
     fetchArticleList, 
     fetchNextArticlePage, 
-    getArticlePageError, 
-    getArticlePageHasMore, 
-    getArticlePageIsLoading, 
-    getArticlePageNumber, 
+    getArticlePageError,
+    getArticlePageInit,
+    getArticlePageIsLoading,
     getArticlePageView 
 } from 'features/ArticleList';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
@@ -39,20 +38,27 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const articlesPageIsLoading = useSelector(getArticlePageIsLoading)
     const articlesPageError = useSelector(getArticlePageError)
     const articlesPageView = useSelector(getArticlePageView)
+    const init = useSelector(getArticlePageInit)
 
     const onViewClick = (view: ArticleView) => {
         dispatch(articlesPageAction.setView(view))
     }
 
     const onLoadNextPart = useCallback(() => {
-        dispatch(fetchNextArticlePage())      
+        if (__PROJECT__ !== 'storybook'){
+            dispatch(fetchNextArticlePage()) 
+        }
+             
     }, [dispatch])
 
     useInitialEffect(() => {
-        dispatch(articlesPageAction.initView())
-        dispatch(fetchArticleList({
-            page : 1
-        }))
+        if (!init){
+            dispatch(articlesPageAction.initView())
+            dispatch(fetchArticleList({
+                page : 1
+            }))
+        }
+        
     })
 
     if (articlesPageError){
@@ -60,7 +66,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     }
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page className={classNames(cls.ArticlesPage, {}, [className])} onScrollEnd={onLoadNextPart}>
                 <ArticlesViewSelector view={articlesPageView} onViewClick={onViewClick}/>
                 <ArticleList 
