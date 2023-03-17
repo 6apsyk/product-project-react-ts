@@ -9,7 +9,7 @@ interface FetchArticleListProps {
 
 export const fetchArticleList = createAsyncThunk<Article[], FetchArticleListProps, ThunkConfig<string>>
 (
-    'comments/fetchArticleList',
+    'articles/fetchArticleList',
     async (arg, thunkAPI) => {
 
         const {page = 1} = arg

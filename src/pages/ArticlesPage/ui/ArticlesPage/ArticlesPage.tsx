@@ -9,7 +9,9 @@ import {
     articlesPageReducer, 
     ArticlesViewSelector, 
     fetchArticleList, 
+    fetchNextArticlePage, 
     getArticlePageError, 
+    getArticlePageHasMore, 
     getArticlePageIsLoading, 
     getArticlePageNumber, 
     getArticlePageView 
@@ -37,17 +39,14 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const articlesPageIsLoading = useSelector(getArticlePageIsLoading)
     const articlesPageError = useSelector(getArticlePageError)
     const articlesPageView = useSelector(getArticlePageView)
-    const articlePageNumber = useSelector(getArticlePageNumber)
 
     const onViewClick = (view: ArticleView) => {
         dispatch(articlesPageAction.setView(view))
     }
 
     const onLoadNextPart = useCallback(() => {
-        dispatch(fetchArticleList({
-            page : articlePageNumber + 1
-        }))
-    }, [articlePageNumber, dispatch])
+        dispatch(fetchNextArticlePage())      
+    }, [dispatch])
 
     useInitialEffect(() => {
         dispatch(articlesPageAction.initView())

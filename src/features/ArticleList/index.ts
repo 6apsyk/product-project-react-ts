@@ -1,3 +1,5 @@
+export { fetchNextArticlePage } from './model/services/fetchNextArticlePage/fetchNextArticlePage'
+
 export { ArticlesViewSelector } from './ui/ArticlesViewSelector/ArticlesViewSelector'
 
 export { 

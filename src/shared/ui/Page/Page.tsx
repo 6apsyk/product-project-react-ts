@@ -1,4 +1,4 @@
-import { ReactNode, useRef, MutableRefObject } from 'react';
+import { ReactNode, useRef, MutableRefObject, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useInfinityScroll } from 'shared/lib/hooks/useInfinityScroll';
 import cls from './Page.module.scss';
@@ -9,7 +9,7 @@ interface PageProps {
  onScrollEnd?: () => void;
 }
 
-export const Page = (props: PageProps) => {
+export const Page = memo((props: PageProps) => {
     const {
         className,
         children,
@@ -22,13 +22,13 @@ export const Page = (props: PageProps) => {
     useInfinityScroll({
         wrapperRef,
         triggerRef,
-        callback: () => console.log('fdsfsd')
+        callback: onScrollEnd
     })
 
     return (
         <section ref={wrapperRef} className={classNames(cls.Page, {}, [className])}>
             {children}
-            <div ref={triggerRef}>hgfyfyg</div>
+            <div ref={triggerRef}></div>
         </section>
     );
-}
+})
