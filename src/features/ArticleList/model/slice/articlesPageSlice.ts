@@ -18,7 +18,7 @@ export const getArticles = articleAdapter.getSelectors<StateSchema>(
 )
   
 const articlesPageSlice = createSlice({
-    name: 'comments',
+    name: 'articlesPage',
     initialState: articleAdapter.getInitialState<articlesPageSchema>({
         isLoading: false,
         error: undefined,
