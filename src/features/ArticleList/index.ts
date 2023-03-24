@@ -9,7 +9,10 @@ export {
     getArticlePageNumber,
     getArticlePageLimit,
     getArticlePageHasMore,
-    getArticlePageInit 
+    getArticlePageInit,
+    getArticlePageField,
+    getArticlePageOrder,
+    getArticlePageSearch 
 } from './model/selectors/articles'
 
 export { 

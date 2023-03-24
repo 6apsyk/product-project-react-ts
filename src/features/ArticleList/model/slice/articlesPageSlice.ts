@@ -4,8 +4,9 @@ import {
     PayloadAction,
 } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
-import { Article, ArticleView } from 'entities/Article'
+import { Article, ArticleSortField, ArticleView } from 'entities/Article'
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localStorage'
+import { SortOrder } from 'shared/types'
 import { fetchArticleList } from '../services/fetchArticleList/fetchArticleList'
 import { articlesPageSchema } from '../types/articlesPageSchema'
   
@@ -26,8 +27,12 @@ const articlesPageSlice = createSlice({
         ids: [],
         view: ArticleView.BIG,
         page: 1,
+        limit: 9,
         hasMore: true,
-        _init: false
+        _init: false,
+        order: 'asc',
+        field: ArticleSortField.CREATED,
+        search: ''
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
@@ -36,6 +41,15 @@ const articlesPageSlice = createSlice({
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload
+        },
+        setOrder: (state, action: PayloadAction<SortOrder>) => {
+            state.order = action.payload
+        },
+        setField: (state, action: PayloadAction<ArticleSortField>) => {
+            state.field = action.payload
+        },
+        setSearch: (state, action: PayloadAction<string>) => {
+            state.search = action.payload
         },
         initView: (state) => {
             const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE_KEY) as ArticleView

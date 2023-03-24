@@ -41,6 +41,12 @@ export enum ArticleView {
     SMALL = 'SMALL'
 }
 
+export enum ArticleSortField {
+    VIEWS = 'views',
+    CREATED = 'createdAt',
+    TITLE = 'title'
+}
+
 export interface Article {
     id: string;
     user: User;

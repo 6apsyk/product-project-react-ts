@@ -6,8 +6,7 @@ import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { 
-    articlesPageReducer, 
-    ArticlesViewSelector, 
+    articlesPageReducer,
     fetchArticleList, 
     fetchNextArticlePage, 
     getArticlePageError,
@@ -19,8 +18,9 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useSelector } from 'react-redux';
 import { articlesPageAction, getArticles } from 'features/ArticleList/model/slice/articlesPageSlice';
-import { ArticleView } from 'entities/Article';
+
 import { Page } from 'shared/ui/Page/Page';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 
 interface ArticlesPageProps {
     className?: string;
@@ -39,10 +39,6 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const articlesPageError = useSelector(getArticlePageError)
     const articlesPageView = useSelector(getArticlePageView)
     const init = useSelector(getArticlePageInit)
-
-    const onViewClick = (view: ArticleView) => {
-        dispatch(articlesPageAction.setView(view))
-    }
 
     const onLoadNextPart = useCallback(() => {
         if (__PROJECT__ !== 'storybook'){
@@ -68,11 +64,12 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page className={classNames(cls.ArticlesPage, {}, [className])} onScrollEnd={onLoadNextPart}>
-                <ArticlesViewSelector view={articlesPageView} onViewClick={onViewClick}/>
+                <ArticlesPageFilters/>
                 <ArticleList 
                     articles={articles} 
                     view={articlesPageView} 
                     isLoading={articlesPageIsLoading}
+                    className={cls.list}
                 />
             </Page>
         </DynamicModuleLoader>
