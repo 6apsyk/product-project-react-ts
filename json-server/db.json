@@ -17,11 +17,11 @@
       "title": "Javascript news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1000,
+      "createdAt": "20.01.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "ECONOMICS"
       ],
       "blocks": [
         {
@@ -86,10 +86,10 @@
     },
     {
       "id": "2",
-      "title": "Python news",
+      "title": "Python news 2",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://d3mxt5v3yxgcsr.cloudfront.net/courses/10756/course_10756_image.png",
-      "views": 1022,
+      "views": 1110,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
@@ -110,11 +110,11 @@
     },
     {
       "id": "3",
-      "title": "Kotlin news",
+      "title": "Kotlin news 2",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://i07.fotocdn.net/s114/94d3cc348e2fedf6/public_pin_l/2568783464.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1220,
+      "createdAt": "15.03.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -134,14 +134,14 @@
     },
     {
       "id": "4",
-      "title": "Python news",
+      "title": "Python news 4",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://d3mxt5v3yxgcsr.cloudfront.net/courses/10756/course_10756_image.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1322,
+      "createdAt": "23.04.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "ECONOMICS"
       ],
       "blocks": [
         {
@@ -158,11 +158,11 @@
     },
     {
       "id": "5",
-      "title": "Kotlin news",
+      "title": "Kotlin news 4",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://i07.fotocdn.net/s114/94d3cc348e2fedf6/public_pin_l/2568783464.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1444,
+      "createdAt": "16.05.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -182,14 +182,14 @@
     },
     {
       "id": "6",
-      "title": "Python news",
+      "title": "Python news 6",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://d3mxt5v3yxgcsr.cloudfront.net/courses/10756/course_10756_image.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1622,
+      "createdAt": "26.06.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "ECONOMICS"
       ],
       "blocks": [
         {
@@ -206,11 +206,11 @@
     },
     {
       "id": "7",
-      "title": "Kotlin news",
+      "title": "Kotlin news 8",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://i07.fotocdn.net/s114/94d3cc348e2fedf6/public_pin_l/2568783464.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1777,
+      "createdAt": "07.07.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -230,11 +230,11 @@
     },
     {
       "id": "8",
-      "title": "Python news",
+      "title": "Python news 9",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://d3mxt5v3yxgcsr.cloudfront.net/courses/10756/course_10756_image.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1888,
+      "createdAt": "26.08.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -254,14 +254,14 @@
     },
     {
       "id": "9",
-      "title": "Kotlin news",
+      "title": "Kotlin news 10",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://i07.fotocdn.net/s114/94d3cc348e2fedf6/public_pin_l/2568783464.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1999,
+      "createdAt": "11.09.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "SCIENCE"
       ],
       "blocks": [
         {
@@ -278,11 +278,11 @@
     },
     {
       "id": "10",
-      "title": "Python news",
+      "title": "Python news 11",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://d3mxt5v3yxgcsr.cloudfront.net/courses/10756/course_10756_image.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1222,
+      "createdAt": "22.10.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -302,14 +302,14 @@
     },
     {
       "id": "11",
-      "title": "Kotlin news",
+      "title": "Kotlin news 12",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://i07.fotocdn.net/s114/94d3cc348e2fedf6/public_pin_l/2568783464.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1211,
+      "createdAt": "11.11.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -326,11 +326,11 @@
     },
     {
       "id": "12",
-      "title": "Python news",
+      "title": "Python news 13",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://d3mxt5v3yxgcsr.cloudfront.net/courses/10756/course_10756_image.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1333,
+      "createdAt": "14.12.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -350,14 +350,14 @@
     },
     {
       "id": "13",
-      "title": "Kotlin news",
+      "title": "Kotlin news 15",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://i07.fotocdn.net/s114/94d3cc348e2fedf6/public_pin_l/2568783464.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1455,
+      "createdAt": "21.01.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "SCIENCE"
       ],
       "blocks": [
         {
@@ -374,11 +374,11 @@
     },
     {
       "id": "14",
-      "title": "Python news",
+      "title": "Python news 16",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://d3mxt5v3yxgcsr.cloudfront.net/courses/10756/course_10756_image.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 2000,
+      "createdAt": "11.02.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -398,11 +398,11 @@
     },
     {
       "id": "15",
-      "title": "Kotlin news",
+      "title": "Kotlin news 21",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://i07.fotocdn.net/s114/94d3cc348e2fedf6/public_pin_l/2568783464.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 2333,
+      "createdAt": "23.03.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -422,14 +422,14 @@
     },
     {
       "id": "16",
-      "title": "Python news",
+      "title": "Python news 21",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://d3mxt5v3yxgcsr.cloudfront.net/courses/10756/course_10756_image.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1888,
+      "createdAt": "22.04.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "SCIENCE"
       ],
       "blocks": [
         {
@@ -446,11 +446,11 @@
     },
     {
       "id": "17",
-      "title": "Kotlin news",
+      "title": "Kotlin news 19",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://i07.fotocdn.net/s114/94d3cc348e2fedf6/public_pin_l/2568783464.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 50000,
+      "createdAt": "11.08.2023",
       "userId": "1",
       "type": [
         "IT"

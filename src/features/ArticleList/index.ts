@@ -12,7 +12,8 @@ export {
     getArticlePageInit,
     getArticlePageField,
     getArticlePageOrder,
-    getArticlePageSearch 
+    getArticlePageSearch,
+    getArticlePageType 
 } from './model/selectors/articles'
 
 export { 

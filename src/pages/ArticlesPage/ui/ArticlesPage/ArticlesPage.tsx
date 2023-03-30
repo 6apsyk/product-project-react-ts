@@ -21,6 +21,10 @@ import { articlesPageAction, getArticles } from 'features/ArticleList/model/slic
 
 import { Page } from 'shared/ui/Page/Page';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
+import { useSearchParams } from 'react-router-dom';
+import { SortOrder } from 'shared/types';
+import { ArticleSortField } from 'entities/Article';
+import { ArticleType } from 'entities/Article/model/types/article';
 
 interface ArticlesPageProps {
     className?: string;
@@ -40,6 +44,8 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const articlesPageView = useSelector(getArticlePageView)
     const init = useSelector(getArticlePageInit)
 
+    const [searchParams] = useSearchParams();
+
     const onLoadNextPart = useCallback(() => {
         if (__PROJECT__ !== 'storybook'){
             dispatch(fetchNextArticlePage()) 
@@ -49,10 +55,19 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     useInitialEffect(() => {
         if (!init){
+
+            const newOrder = searchParams.get('order') as SortOrder
+            const newSort = searchParams.get('sort')  as ArticleSortField
+            const newSearch = searchParams.get('search')
+            const newType = searchParams.get('type') as ArticleType
+
+            if(newOrder) dispatch(articlesPageAction.setOrder(newOrder))
+            if(newSort) dispatch(articlesPageAction.setField(newSort))
+            if(newSearch) dispatch(articlesPageAction.setSearch(newSearch))
+            if(newType) dispatch(articlesPageAction.setType(newType))
+
             dispatch(articlesPageAction.initView())
-            dispatch(fetchArticleList({
-                page : 1
-            }))
+            dispatch(fetchArticleList({}))
         }
         
     })
