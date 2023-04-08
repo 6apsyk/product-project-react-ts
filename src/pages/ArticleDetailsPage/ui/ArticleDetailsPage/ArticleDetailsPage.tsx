@@ -17,13 +17,21 @@ import { addCommentForArticle, AddCommentForm } from 'features/addCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'shared/ui/Page/Page';
+import { 
+    articleDetailsRecommendationsReducer,
+    getArticleRecommendations 
+} from 'features/ArticleRecommendationList/model/slice/articleDetailsRecommendationsSlice';
+import { getArticleRecommendationsIsLoading } from 'features/ArticleRecommendationList/model/selectors/recommendations';
+import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
+import { fetchRecommendations } from 'features/ArticleRecommendationList';
 
 interface ArticleDetailsPageProps {
     className?: string;
 }
 
 const reducers: ReducersList = {
-    articleDetailsComments: articleDetailsCommentsReducer
+    articleDetailsComments: articleDetailsCommentsReducer,
+    articleDetailsRecommendations: articleDetailsRecommendationsReducer
 }
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
@@ -31,7 +39,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article-details');
     const { id } = useParams<{ id: string }>();
     const comments = useSelector(getArticleComments.selectAll)
+    const recommendations = useSelector(getArticleRecommendations.selectAll)
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
+    const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading)
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
 
@@ -45,6 +55,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id))
+        dispatch(fetchRecommendations())
     });
 
     if (!id) {
@@ -62,10 +73,17 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     {t('Назад к списку')}
                 </Button>
                 <ArticleDetails id={id} />
+                <Text className={cls.commentTitle} title={t('Рекомендации')}/>
+                <ArticleList 
+                    className={cls.recommendations} 
+                    articles={recommendations} 
+                    isLoading={recommendationsIsLoading}
+                    target='_blank'
+                />
                 <Text className={cls.commentTitle} title={t('Комментарии')}/>
                 <AddCommentForm onSendComment={onSendComment}/>
                 <CommentList 
-                    comments={comments}
+                    comments={comments.reverse()}
                     isLoading={commentsIsLoading}
                 />
             </Page>

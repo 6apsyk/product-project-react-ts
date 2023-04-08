@@ -10,6 +10,7 @@ import { articleDetailsCommentsSchema } from 'features/ArticleCommentList';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { articlesPageSchema } from 'features/ArticleList';
 import { ScrollSaveSchema } from 'features/scrollSave';
+import { articleDetailsRecommendationsSchema } from 'features/ArticleRecommendationList';
 
 export interface StateSchema {
     user: UserSchema;
@@ -19,6 +20,7 @@ export interface StateSchema {
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
     articleDetailsComments?: articleDetailsCommentsSchema;
+    articleDetailsRecommendations?: articleDetailsRecommendationsSchema;
     addCommentForm?: AddCommentFormSchema;
     articlesPage?: articlesPageSchema;
 

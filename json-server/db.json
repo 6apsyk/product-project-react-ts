@@ -21,7 +21,8 @@
       "createdAt": "20.01.2022",
       "userId": "1",
       "type": [
-        "IT", "ECONOMICS"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -141,7 +142,8 @@
       "createdAt": "23.04.2022",
       "userId": "1",
       "type": [
-        "IT", "ECONOMICS"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -189,7 +191,8 @@
       "createdAt": "26.06.2022",
       "userId": "1",
       "type": [
-        "IT", "ECONOMICS"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -261,7 +264,8 @@
       "createdAt": "11.09.2022",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -357,7 +361,8 @@
       "createdAt": "21.01.2023",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -429,7 +434,8 @@
       "createdAt": "22.04.2023",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE"
+        "IT",
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -541,6 +547,12 @@
       "userId": "1",
       "text": "frtgrgdgrdg",
       "id": "2CqfhEI"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "тестовый комент",
+      "id": "C07XSUU"
     }
   ],
   "users": [
